@@ -10,9 +10,7 @@ insert into grupo values
 (default,'a'),
 (default,'b'),
 (default,'c'),
-(default,'d'),
-(default,'e'),
-(default,'f');
+(default,'d');
 
 select * from grupo;
 
