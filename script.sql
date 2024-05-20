@@ -75,9 +75,9 @@ foreign key (fkGrupoViking) references viking(fkGrupo),
 foreign key (fkEtapa) references etapa(idEtapa),
 primary key (idLuta,fkViking,fkGrupoViking,fkEtapa));
 
-insert into luta values 
-(default,1,1,1,'2024-05-20 00:00:00',1),
-(default,1,1,1,'2024-05-20 00:00:00',0);
+insert into luta(fkViking,fkGrupoViking,fkEtapa,dtLuta,vencedor) values 
+(1,1,1,'2024-05-20 02:00:00');
+
 
 select * from luta;
 
