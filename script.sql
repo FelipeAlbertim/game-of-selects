@@ -7,10 +7,10 @@ idGrupo int primary key auto_increment,
 nome varchar(45));
 
 insert into grupo values
-(default,'a'),
-(default,'b'),
-(default,'c'),
-(default,'d');
+(default,'A'),
+(default,'B'),
+(default,'C'),
+(default,'D');
 
 select * from grupo;
 
@@ -80,3 +80,14 @@ insert into luta values
 (default,1,1,1,'2024-05-20 00:00:00',0);
 
 select * from luta;
+
+select luta.idLuta as 'Identificador da luta',
+	viking.nome as 'Nome Viking',
+    grupo.nome as 'Nome do Grupo',
+    etapa.descricao as 'Fase do Lutador',
+    luta.dtLuta as 'Data e Hora da Luta',
+    luta.vencedor as 'Venceu a luta?'
+    from viking 
+    join grupo on viking.fkGrupo = grupo.idGrupo
+    join luta on luta.fkViking = viking.idViking
+    join etapa on luta.fkEtapa = etapa.idEtapa;
