@@ -26,10 +26,29 @@ foreign key (fkGrupo) references grupo(idGrupo),
 primary key (idViking, fkGrupo)
 );
 
-insert into viking values
-(default,1,'Ragnart',90,21),
-(default,1,'Harold',120,19),
-(default,1,'Soluço',90,20);
+insert into viking values -- GRUPO A
+(default,1,'Ragnart',93,21),
+(default,1,'Harold',95,19),
+(default,1,'Soluço',90,20),
+(default,1,'Sigurd',98,21);
+
+insert into viking (fkGrupo,nome,peso,idade) values -- GRUPO B
+(2,'Ragnar Lothbrok',100,20),
+(2,'Bjorn Ironside',105,21),
+(2,'Lagertha', 104,20),
+(2,'Ubbe', 109,22);
+
+insert into viking (fkGrupo,nome,peso,idade) values -- GRUPO C
+(3,'Ivar',112,24),
+(3,'Rollo',119,24),
+(3,'Floki',116,22),
+(3,'Aslaug',114,21);
+
+insert into viking (fkGrupo,nome,peso,idade) values -- GRUPO D
+(3,'Harald', 120,25),
+(3,'Finehair', 122,25),
+(3,'Gunnar',125,26),
+(3,'Freydis',121,22);
 
 select * from viking;
 
